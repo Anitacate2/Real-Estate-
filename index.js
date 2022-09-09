@@ -1,3 +1,6 @@
+// Alert Function
+document.querySelector('search') .addEventListener('click',
+      () =>alert('search'));
 const options = {
 	method: 'GET',
 	headers: {
