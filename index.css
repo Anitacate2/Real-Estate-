@@ -1,0 +1,464 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border=box;
+    font-family: 'Poppings', sans=serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: #111;
+}
+.container{
+    width: 100%;
+    max-width: 1230px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0 15px;
+    background: white;
+}
+header{
+    width: 100%;
+    min-height: 70px;
+    border-bottom: 1px solid #555;
+    overflow: hidden;
+    position: relative;
+}
+header .logo{
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-shadow: 4px 5px 10px #ddd;
+}
+header ul{
+    float: right;
+    list-style: none;
+}
+header ul li{
+    display: inline-block;
+    line-height: 70px;
+}
+header ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.7;
+    padding: 10px 20px;
+}
+header ul li a:hover{
+    font-weight: bold;
+    opacity: 1;
+}
+header ul li a.active{
+    background: black;
+    border-radius: 50px;
+    color: white;
+}
+header .menu{
+    position: absolute;
+    top: 37px;
+    right: 10px;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: none;
+}
+/*--------------------Section--------------*/
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 20px;
+}
+section .banner{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+.banner .thumb{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner .thumb img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    animation: fade is ease-in-out;
+}
+@keyframes fade{
+    from{opacity: 0.5;}
+    to{opacity: 1;}
+}
+.banner .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.banner .text h2{
+    text-transform: uppercase;
+    letter-spacing: 1px 3px 0 white;
+    font-size: 3em;
+    color: rgb(13,187,187);
+}
+.banner .text p{
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: brown;
+}
+.banner .text input{
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #0009;
+    color: white;
+    padding: 0 5px;
+}
+.banner text button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;  
+}
+.prev, .next{
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3px;
+    padding: 0 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.next{
+    right: 0;
+}
+.prev:hover, .next:hover{
+    opacity: 1;
+}
+.slide-nav{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.slide-nav .nav-dot{
+    background: black;
+    width: 20px;
+    margin: 0 20px;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 10px;
+    line-height: 17px;
+    border: 1px solid crimson;
+    cursor: pointer;
+}
+.slide-nav .nav-dot.active{
+    background: crimson;
+
+}
+/* -----------------------------About------------------------ */
+#about{
+    width: 100%;
+    margin-top: 20px;
+}
+#about h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+#about .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .content .text{
+    flex: 1;
+    min-width: 100px;
+    max-width: 500px;
+}
+#about .content .text p{
+    line-height: 1.4;
+    margin: 10px 0;
+}
+#about .content .text a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #330;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 3px;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.3s ease-in-out;
+}
+#about .thumb{
+    flex: 1;
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .thumb .thumb-box{
+    flex: 1;
+    min-width: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
+}
+#about .thumb .thumb-box img{
+    width: 100%;
+    height: 240px;
+    display: block;
+    object-fit: cover;
+}
+#about .thumb .thumb-box h3{
+    height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+#about .thumb .thumb-box:hover,
+#about .content .text a:hover{
+    box-shadow: none;
+}
+#about .patner h3{
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+#about .patner p{
+    margin: 10px 0;
+}
+#about .patner a{
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10px;
+    color: crimson;
+    display: inline-block;
+}
+#about .patner a:hover{
+    font-weight: 900;
+    color: teal;
+}
+
+/* -----------------------------Properties------------------- */
+#properties{
+    width: 100%;
+    margin-top: 20px;
+}
+#properties h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+#properties .content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#properties .content .box{
+    flex: 1;
+    min-width: 300px;
+    min-height: 500px;
+    overflow: hidden;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 4px 5px 10px #ddd;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+#properties .content .box:hover{
+    box-shadow: none;
+}
+#properties .content .box img{
+    width: 100px;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+}
+#properties h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+#properties span{
+    color: teal;
+    padding-right: 10px;
+}
+#properties p{
+    line-height: 1.4;
+    margin: 5px 0;
+}
+#properties a{
+    text-decoration: none;
+    color: white;
+    background: #555;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+/* -----------------------------Services--------------------- */
+#services{
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+#services h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+#services .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    cursor: pointer;
+}
+#services .content .card{
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+#services .content .card i{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+    color: teal;
+    line-height: 100px;
+}
+#services .content .card img{
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+}
+#services .content .card h3{
+    font-size: 1.3em;
+    letter-spacing: 4px;
+}
+#services .content .card p{
+    color: #888;
+    margin: 10px 0;
+}
+#services .content .card.circle img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    border: 3px solid #888;
+    display: block;
+    object-fit: cover;
+}
+#services .content .card.circle h3{
+    color: teal;
+}
+
+/* -----------------------------Contact---------------------- */
+#contact{
+    width: 100%;
+    margin-top: 20px;
+}
+#contact h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+#contact .content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact .form{
+    flex: 1;
+    min-width: 300px;
+    padding: 30px 15px;
+}
+#contact form input,
+#contact form textarea,
+#contact form button{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #555;
+    margin: 15px 0;
+    resize: none;
+}
+#contact .map{
+    min-width: 300px;
+    flex: 1;
+    padding: 30px 15px;
+}
+#contact .map iframe{
+    width: 100%;
+}
+#contact .form button{
+    background: rgb(0, 96, 151);
+    height: 40px;
+    color: white;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#contact .box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact .box .text{
+    flex: 1;
+    margin: 15px;
+}
+#contact .box .text h3{
+    color: teal;
+    letter-spacing: 3px;
+}
+#contact .box .text p{
+    line-height: 1.4;
+    margin: 10px 0;
+}
+#contact .box .text span{
+    color: crimson;
+}
+/* -----------------------------Footer----------------------- */
+
+/* -----------------------------Register / login----------------- */
